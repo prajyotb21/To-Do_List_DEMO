@@ -1,0 +1,11 @@
+<div class="my-3">
+
+    <h4 [ngClass]="{'strike': !pass_todo.active}">{{pass_todo.title}} </h4>
+    <p [ngClass]="{'strike': !pass_todo.active}">{{pass_todo.desc}}</p>
+    
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onMark(pass_todo)" [checked]="!pass_todo.active">
+        <label class="form-check-label mb-3" for="exampleCheck1{{i}}">Completed</label>
+      </div>
+    <button type="button" class="btn btn-danger mb-5" (click)="del_todo(pass_todo)">Delete</button>
+</div>
